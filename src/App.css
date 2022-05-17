@@ -3,10 +3,11 @@
 /* Common */
 html{height:100%;}
 body{display:flex;margin:0;padding:0;height:100%;align-items:center;justify-content:center;background-color:#f6f6f6;}
+p{margin:0;}
 
 #root{height:100%;background-color:#fff;box-shadow:rgba(100, 100, 111, 0.2) 0 7px 29px 0;overflow:hidden;}
 
-.App{padding:0 20px;height:100%;font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;}
+.App{padding:0 20px;height:100%;font-family:Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;}
 
 /* Header */
 header{display:flex;padding:20px 0;border-bottom:1px solid #e2e2e2;align-items:center;}
@@ -16,10 +17,30 @@ header .head-left{width:25%;justify-content:flex-start;}
 header .head-right{width:25%;justify-content:flex-end;}
 
 /* Button */
-.common-button{padding:10px 20px 10px 20px;font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;font-size:18px;border:none;border-radius:5px;white-space:nowrap;cursor:pointer;}
+.common-button{padding:10px 20px 10px 20px;font-family:inherit;font-size:18px;border:none;border-radius:5px;white-space:nowrap;cursor:pointer;}
 .common-button.default{color:#000;background-color:#ececec;}
 .common-button.positive{color:#fff;background-color:#64c964;}
 .common-button.negative{color:#fff;background-color:#fd565f;}
+
+/* DiaryList */
+.diary-list .menu-wrapper{display:flex;margin:20px 0 30px 0;align-items:center;justify-content:space-between;}
+.diary-list .menu-wrapper .btn-container{flex-grow:1;}
+.diary-list .menu-wrapper .btn-container button{width:100%;}
+.diary-list .control-menu{margin-right:10px;padding:10px 20px;font-family:inherit;font-size:18px;border:none;border-radius:5px;background-color:#ececec;cursor:pointer;}
+
+/* DiaryItem */
+.diary-item{display:flex;padding:15px 0;border-bottom:1px solid #e2e2e2;align-items:center;justify-content:space-between;}
+.diary-item .emotion-box{display:flex;min-width:120px;height:80px;border-radius:5px;justify-content:center;cursor:pointer;}
+.diary-item .emotion-box img{width:50%;}
+.diary-item .emotion-box.emotion1{background-color:#64c964;}
+.diary-item .emotion-box.emotion2{background-color:#9dd772;}
+.diary-item .emotion-box.emotion3{background-color:#fdce17;}
+.diary-item .emotion-box.emotion4{background-color:#fd8446;}
+.diary-item .emotion-box.emotion5{background-color:#fd565f;}
+.diary-item .content-box{padding-left:20px;flex-grow:1;align-self:flex-start;cursor:pointer;}
+.diary-item .content-box .diary-date{margin-bottom:5px;font-size:18px;font-weight:500;}
+.diary-item .content-box .diary-content{font-size:18px;}
+.diary-item .btn-box{min-width:70px;}
 
 /* Media Query */
 @media (min-width: 650px){
