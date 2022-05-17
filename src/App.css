@@ -50,3 +50,12 @@ header .head-right{width:25%;justify-content:flex-end;}
 @media (max-width: 650px){
   .App{width:90vw;}
 }
+
+@media (max-width: 470px){
+  .diary-list .menu-wrapper{flex-direction:column;}
+  .diary-list .select-container{width:100%;}
+  .diary-list .control-menu{margin:0 0 10px 0;width:100%;}
+  .diary-list .btn-container{width:100%;}
+  .diary-item .emotion-box{min-width:60px;height:40px;}
+  .diary-item .btn-box button{padding:10px;font-size:14px;}
+}
