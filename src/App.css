@@ -1,13 +1,19 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 
 /* Common */
+*, *:before, *:after{box-sizing:border-box;}
 html{height:100%;font-size:16px;}
 body{display:flex;margin:0;padding:0;height:100%;align-items:center;justify-content:center;background-color:#f6f6f6;}
 p{margin:0;}
+input, textarea, button, select{font-family:inherit;font-size:1rem;border:none;border-radius:5px;background:#ececec;}
+button, select{cursor:pointer;}
+textarea{border:none;resize:vertical;}
+ul{margin:0;padding:0;}
+li{list-style:none;}
 
 #root{height:100%;background-color:#fff;box-shadow:rgba(100, 100, 111, 0.2) 0 7px 29px 0;overflow:hidden;}
 
-.App{padding:0 1.25rem;height:100%;font-family:Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;}
+.App{padding:0 1.25rem;height:100%;font-family:Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;color:#222;overflow-y:auto;}
 
 /* Header */
 header{display:flex;padding:1.25rem 0;border-bottom:1px solid #e2e2e2;align-items:center;}
@@ -17,8 +23,7 @@ header .head-left{width:25%;justify-content:flex-start;}
 header .head-right{width:25%;justify-content:flex-end;}
 
 /* Button */
-.common-button{padding:0.625rem 1.25rem;font-family:inherit;font-size:1.125rem;border:none;border-radius:5px;white-space:nowrap;cursor:pointer;}
-.common-button.default{color:#000;background-color:#ececec;}
+.common-button{padding:0.625rem 1.25rem;font-size:1.125rem;white-space:nowrap;}
 .common-button.positive{color:#fff;background-color:#64c964;}
 .common-button.negative{color:#fff;background-color:#fd565f;}
 
@@ -26,7 +31,7 @@ header .head-right{width:25%;justify-content:flex-end;}
 .diary-list .menu-wrapper{display:flex;margin:1.25rem 0;align-items:center;justify-content:space-between;}
 .diary-list .menu-wrapper .btn-container{flex-grow:1;}
 .diary-list .menu-wrapper .btn-container button{width:100%;}
-.diary-list .control-menu{margin-right:0.625rem;padding:0.625rem 1.25rem;font-family:inherit;font-size:1.125rem;border:none;border-radius:5px;background-color:#ececec;cursor:pointer;}
+.diary-list .control-menu{margin-right:0.625rem;padding:0.625rem;font-size:1.125rem;}
 
 /* DiaryItem */
 .diary-item{display:flex;padding:0.938rem 0;border-bottom:1px solid #e2e2e2;align-items:center;justify-content:space-between;}
@@ -42,24 +47,56 @@ header .head-right{width:25%;justify-content:flex-end;}
 .diary-item .content-box .diary-content{display:-webkit-box;font-size:1.125rem;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow: hidden;}
 .diary-item .btn-box{min-width:4.375rem;flex-shrink:0;}
 
+/* DiaryEditor */
+.diary-editor section{margin-bottom:2.5rem;}
+.diary-editor h3{font-size:1.125rem;font-weight:700;}
+.diary-editor .input-date{padding:0.625rem 1.25rem;cursor:pointer;}
+.diary-editor .emotion-list{display:grid;grid-template-columns:repeat(5, auto);gap:2%;}
+.diary-editor .content-box textarea{padding:1.25rem;width:100%;height:100%;height:12.5rem;}
+.diary-editor .control-box{display:flex;justify-content:space-between;}
+
+/* EmotionItem */
+.emotion-item{display:flex;padding:1.25rem 0;flex-direction:column;align-items:center;justify-content:center;background-color:#ececec;border-radius:5px;cursor:pointer;}
+.emotion-item.on1{background-color:#64c964;color:#fff;}
+.emotion-item.on2{background-color:#9dd772;color:#fff;}
+.emotion-item.on3{background-color:#fdce17;color:#fff;}
+.emotion-item.on4{background-color:#fd8446;color:#fff;}
+.emotion-item.on5{background-color:#fd565f;color:#fff;}
+.emotion-item img{padding-bottom:0.625rem;width:50%;}
+
 /* Media Query */
 @media (min-width: 650px){
+  /* Common */
   .App{width:40rem;}
 }
 
 @media (max-width: 650px){
+  /* Common */
   .App{width:90vw;}
 }
 
 @media (max-width: 470px){
+  /* Common */
   html{font-size:14px;}
 }
 
-@media (max-width: 420px) {
+@media (max-width: 420px){
+  /* Common */
   html {font-size: 12px;}
+
+  /* DiaryList */
   .diary-list .menu-wrapper{flex-direction: column;}
   .diary-list .select-container{width:100%;}
-  .diary-list .control-menu{margin: 0 0 10px 0;width: 100%;}
+  .diary-list .control-menu{margin: 0 0 0.625rem 0;width: 100%;}
   .diary-list .btn-container{width:100%;}
+  
+  /* DiaryItem */
   .diary-item .emotion-box{width:3.75rem;height:2.5rem;}
+  .diary-item .common-button{padding:0.625rem;}
+}
+
+@media (max-width: 319px){
+  /* EmotionItem */
+  .emotion-item img{padding:0;}
+  .emotion-item span{display:none;}
 }
