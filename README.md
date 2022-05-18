@@ -34,4 +34,6 @@
 
 🎯 <b>일기 상세(Diary) 페이지 구현</b>
 - useParams 속성을 이용해서 선택한 일기의 id값을 불러와서 해당 일기의 데이터를 불러온다.
-- useNavigate 속성을 이용해서 해당 일기 데이터가 없을 때 메인 페이지로 이동시킨다. replace: true 속성을 추가해서 뒤로가기를 해도 해당 페이지로 이동할 수 없게 한다.
+- useNavigate 속성을 이용해서 해당 일기 데이터가 없을 때 메인 페이지로 이동시킨다. replace: true 속성을 추가해서 뒤로가기를 해도 해당 페이지로 이동할 수 없게 한다.<br><br>
+
+[중간 배포 URL](https://6284b4070d95d9555e3e82c4--joyful-cuchufli-aab15b.netlify.app/)
