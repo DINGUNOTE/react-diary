@@ -48,12 +48,12 @@ header .head-right{width:25%;justify-content:flex-end;}
 .diary-item .btn-box{min-width:4.375rem;flex-shrink:0;}
 
 /* DiaryEditor */
-.diary-editor section{margin-bottom:2.5rem;}
+.diary-editor section:not(last-child){margin-bottom:2.5rem;}
 .diary-editor h3{font-size:1.125rem;font-weight:700;}
 .diary-editor .input-date{padding:0.625rem 1.25rem;cursor:pointer;}
 .diary-editor .emotion-list{display:grid;grid-template-columns:repeat(5, auto);gap:2%;}
 .diary-editor .content-box textarea{padding:1.25rem;width:100%;height:100%;height:12.5rem;}
-.diary-editor .control-box{display:flex;justify-content:space-between;}
+.diary-editor .control-box{display:flex;justify-content:flex-end;}
 
 /* EmotionItem */
 .emotion-item{display:flex;padding:1.25rem 0;flex-direction:column;align-items:center;justify-content:center;background-color:#ececec;border-radius:5px;cursor:pointer;}
@@ -63,6 +63,18 @@ header .head-right{width:25%;justify-content:flex-end;}
 .emotion-item.on4{background-color:#fd8446;color:#fff;}
 .emotion-item.on5{background-color:#fd565f;color:#fff;}
 .emotion-item img{padding-bottom:0.625rem;width:50%;}
+
+/* Diary */
+.diary-page section{display:flex;flex-direction:column;align-items:center;text-align:center;}
+.diary-page h3{font-size:1.125rem;font-weight:700;}
+.diary-page .emotion-box{display:flex;flex-direction:column;align-items:center;justify-content:space-around;margin-bottom:3.125rem;width:15.625rem;height:15.625rem;background-color:#ececec;border-radius:5px;}
+.diary-page .emotion-box.emotion1{background:#64c964;}
+.diary-page .emotion-box.emotion2{background:#9dd772;}
+.diary-page .emotion-box.emotion3{background:#fdce17;}
+.diary-page .emotion-box.emotion4{background:#fd8446;}
+.diary-page .emotion-box.emotion5{background:#fd565f;}
+.diary-page .emotion-descript{font-size:1.125rem;color:#fff;}
+.diary-page .content-box{padding:1.25rem;width:100%;text-align:left;line-height:1.5;background-color:#ececec;border-radius:5px;word-break:keep-all;}
 
 /* Media Query */
 @media (min-width: 650px){
