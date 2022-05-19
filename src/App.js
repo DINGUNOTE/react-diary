@@ -42,7 +42,7 @@ export const DiaryDispatchContext = React.createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, []);
-  const dataId = useRef(0);
+  const dataId = useRef(1);
 
   useEffect(() => {
     const localData = localStorage.getItem('diary');
@@ -50,9 +50,11 @@ function App() {
       const diaryList = JSON.parse(localData).sort(
         (a, b) => parseInt(b.id) - parseInt(a.id),
       ); // 일기 리스트 내림차순 정렬
-      dataId.current = parseInt(diaryList[0].id) + 1; // 제일 마지막 값에 1을 더해서 그 id부터 사용하겠다.
 
-      dispatch({ type: 'INIT', data: diaryList });
+      if (diaryList.length > 0) {
+        dataId.current = parseInt(diaryList[0].id) + 1; // 제일 마지막 값에 1을 더해서 그 id부터 사용하겠다.
+        dispatch({ type: 'INIT', data: diaryList });
+      }
     }
   }, []);
   // CREATE
