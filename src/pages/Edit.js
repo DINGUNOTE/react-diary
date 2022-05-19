@@ -10,7 +10,11 @@ const Edit = () => {
 
   const diaryList = useContext(DiaryStateContext);
 
-  console.log(diaryList);
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `감정일기장 | ${id}번 일기 수정하기`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (diaryList.length > 0) {
