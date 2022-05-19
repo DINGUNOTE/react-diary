@@ -1,3 +1,5 @@
+import React from 'react';
+
 const EmotionItem = ({
   emotionId,
   emotionImg,
@@ -18,4 +20,4 @@ const EmotionItem = ({
   );
 };
 
-export default EmotionItem;
+export default React.memo(EmotionItem);
