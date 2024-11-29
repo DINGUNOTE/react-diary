@@ -1,4 +1,4 @@
-### ⚽ 목표: [react-diary-proto 프로젝트](https://github.com/DINGUNOTE/react-diary-proto)를 응용해서 서비스 구현<br><br>
+### ⚽ 목표: [react-diary-proto 프로젝트](https://github.com/zekelee/react-diary-proto)를 응용해서 서비스 구현<br><br>
 
 ### [배포 URL](https://web-ljg-emotion-diary.web.app/)<br><br>
 
